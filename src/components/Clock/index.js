@@ -2,11 +2,7 @@ import {Component} from 'react'
 import './index.css'
 
 class Clock extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {date: new Date()}
-    console.log('constructor called')
-  }
+  state = {date: new Date()}
 
   componentDidMount() {
     this.timerId = setInterval(this.tick, 1000)
